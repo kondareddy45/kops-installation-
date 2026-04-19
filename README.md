@@ -34,3 +34,6 @@ export KOPS_STATE_STORE=s3://s3-kops-b
 kops update cluster --name reddy.k8s.local --yes --admin
 
 kubectl get nodes
+
+**Kuster deletion**
+kops delete cluster reddy.k8s.local --yes
