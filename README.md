@@ -29,7 +29,7 @@ aws s3 mb s3://<bucket-name>
 
 export KOPS_STATE_STORE=s3://s3-kops-b
 
- kops create cluster --name reddy.k8s.local --zones us-east-1c,us-east-1b --master-size t2.medium --master-volume-size 30 --node-count 2 --node-volume-size 20 --node-size t2.small --image=ami-0ec10929233384c7f
+ kops create cluster --name reddy.k8s.local --zones us-east-1c,us-east-1b --master-size c7i-flex.large --master-volume-size 30 --node-count 2 --node-volume-size 20 --node-size t3.small --image=ami-0ec10929233384c7f
 
 kops update cluster --name reddy.k8s.local --yes --admin
 
